@@ -1,0 +1,39 @@
+body {
+  color: #fff;
+  font-family: 'Nunito Semibold';
+  text-align: center;
+}
+
+#content {
+  /* define grid */
+  display: grid;
+  /* define columns */
+  grid-template-columns: repeat(3, 1fr);
+  /*Disregerds the content  */
+  grid-auto-rows: 200px;
+  /* grid-auto-rows: minmax(200px, auto); */
+  /* grid-template-rows: 200px 300px 400px 200px; */
+  /* Create space in between rows and columns */
+  /* grid-column-gap: 10px;
+  grid-row-gap: 10px; */
+  /* You can write this in one line */
+  grid-gap: 10px;
+  grid-template-rows: repeat(3, minmax(200px, auto));
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#content div {
+  background: #3bbced;
+  padding: 30px;
+  /*Dont use margin, use grid-gap  */
+  /* margin: 20px; */
+}
+
+#content div:nth-child(even) {
+  background: #777;
+}
+
+/* div {
+  overflow: auto;
+} */
